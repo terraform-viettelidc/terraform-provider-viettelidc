@@ -47,4 +47,5 @@ vcd/*-out-*.txt
 # Go workspace
 go.work
 
-
+# Smoke test folder
+_smoke/

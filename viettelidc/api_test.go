@@ -5,7 +5,6 @@ package viettelidc
 import (
 	"fmt"
 	"os"
-	"path"
 	"path/filepath"
 	"regexp"
 	"runtime"
@@ -60,7 +59,7 @@ Tagged tests can also run using make
   make testacc
   make testcatalog
 `
-	t.Logf(helpText)
+	t.Log(helpText)
 }
 
 // For troubleshooting:
@@ -135,7 +134,7 @@ func getMajorVersionFromFile(fileName string) string {
 // Reads the version from a given file in the root directory
 func getVersionFromFile(fileName string) (string, error) {
 
-	versionFile := path.Join(getCurrentDir(), "..", fileName)
+	versionFile := filepath.Join(getCurrentDir(), "..", fileName)
 
 	// Checks whether the wanted file exists
 	_, err := os.Stat(versionFile)
